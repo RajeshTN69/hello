@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="c1.css">
+</head>
+<body style="background-color: black;">
+<div class="div1">
+<label for="name" style="color: white;">NAME</label>
+<input type="text" id="ip1">
+<br><br>
+<label for="password" style="color: white;">PASSWORD</label>
+<input type="text" id="ip2">
+<br><br>
+<button onclick="func()" id="b2">CONFIRM</button>
+</div>
+</body>
+<script>
+    function func(){
+        let NAME=document.getElementById('ip1').value;
+        let PASSWORD=document.getElementById('ip2').value;
+
+        let web_name="rajesh"
+        let web_pass="pass"
+
+        if(NAME==web_name && PASSWORD==web_pass){
+            window.location="a2.html"
+        }
+        else if(NAME== "" && PASSWORD== ""){
+            alert('your name or password is not filled')
+        }
+
+        else if(NAME== web_name && PASSWORD=="")
+        {
+            alert('name is correct,but is not correct or entered')
+        }
+        
+    }
+</script>
+</html>
